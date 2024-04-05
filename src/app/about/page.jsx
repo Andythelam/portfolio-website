@@ -64,7 +64,7 @@ const AboutPage = () => {
               </svg>
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
-            <motion.svg
+            {/* <motion.svg
               initial={{opacity: 0.2, y: 0}}
               animate={{opacity: 1, y: '10px'}}
               transition={{repeat: Infinity, duration: 3, ease: 'easeInOut'}}
@@ -85,10 +85,10 @@ const AboutPage = () => {
                 stroke='#000000'
                 strokeWidth='1'
               ></path>
-            </motion.svg>
+            </motion.svg> */}
           </div>
           {/* SKILLS CONTAINER */}
-          <div className='flex flex-col gap-12 justify-center' ref={skillRef}>
+          <div className='flex flex-col gap-12 justify-center mt-8' ref={skillRef}>
             {/* SKILL TITLE */}
             <motion.h1
               initial={{x: '-300px'}}
@@ -181,7 +181,7 @@ const AboutPage = () => {
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
-            <motion.svg
+            {/* <motion.svg
               initial={{opacity: 0.2, y: 0}}
               animate={{opacity: 1, y: '10px'}}
               transition={{repeat: Infinity, duration: 3, ease: 'easeInOut'}}
@@ -202,11 +202,11 @@ const AboutPage = () => {
                 stroke='#000000'
                 strokeWidth='1'
               ></path>
-            </motion.svg>
+            </motion.svg> */}
           </div>
           {/* EXPERIENCE CONTAINER */}
           <div
-            className='flex flex-col gap-12 justify-center pb-48'
+            className='flex flex-col gap-4 justify-center pb-48 mt-14'
             ref={experienceRef}
           >
             {/* EXPERIENCE TITLE */}
@@ -214,7 +214,7 @@ const AboutPage = () => {
               initial={{x: '-300px'}}
               animate={isExperienceRefInView ? {x: '0'} : {}}
               transition={{delay: 0.2}}
-              className='font-bold text-2xl'
+              className='font-bold text-2xl mb-8'
             >
               EXPERIENCE
             </motion.h1>

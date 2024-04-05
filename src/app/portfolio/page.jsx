@@ -1,6 +1,5 @@
 'use client';
 import {motion, useScroll, useTransform} from 'framer-motion';
-import Image from 'next/image';
 import {useRef} from 'react';
 import {Carousel} from '@/components/carousel';
 
@@ -8,7 +7,7 @@ const cards = [
   {
     id: '1',
     title: 'FlexWise',
-    tags: ['JavaScript', 'SQL', 'JWT', 'Testing', 'Password Hashing'],
+    tags: ['JavaScript', 'SQL', 'JWT', 'Testing', 'BCrypt'],
     description:
       'Save money on health expenses by calculating your optimal FSA contribution!',
     picture: '/flexwise.png',
@@ -47,9 +46,11 @@ const PortfolioPage = () => {
       animate={{y: '0%'}}
       transition={{duration: 1}}
     >
-      <div className='flex justify-center items-center mx-auto px-4' ref={ref}>
-        <div className='w-screen h-[calc(100vh-6rem)] text-5xl text-center'>
-          Some things I've worked on
+      <div className='flex justify-center items-center mx-auto px-6' ref={ref}>
+        <div className=''>
+          <div className='text-5xl text-center py-6'>
+            Some things I've worked on
+          </div>
           <Carousel cards={cards} />
         </div>
       </div>
