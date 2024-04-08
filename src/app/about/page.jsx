@@ -8,10 +8,10 @@ const AboutPage = () => {
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
-  const isSkillRefInView = useInView(skillRef, {margin: '-100px'});
+  const isSkillRefInView = useInView(skillRef, {margin: '-200px'});
 
   const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, {margin: '-100px'});
+  const isExperienceRefInView = useInView(experienceRef, {margin: '-200px'});
 
   return (
     <motion.div
@@ -28,7 +28,7 @@ const AboutPage = () => {
           <div className='flex flex-col gap-12 justify-center'>
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src='https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800'
+              src='/circle-pic.png'
               alt=''
               width={112}
               height={112}

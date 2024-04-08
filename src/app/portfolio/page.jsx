@@ -6,6 +6,26 @@ import {Carousel} from '@/components/carousel';
 const cards = [
   {
     id: '1',
+    title: 'Feo Fig',
+    tags: ['Typescript', 'React', 'AWS', 'Docker', 'Puppeteer'],
+    description:
+      'Optimize your frontend with fast, easy, and reusable configurations.',
+    picture: '/feofig.png',
+    codeLink: 'https://github.com/oslabs-beta/feofig',
+    siteLink: 'http://feofig.com',
+  },
+  {
+    id: '2',
+    title: 'Rendez View',
+    tags: ['JavaScript', 'API', 'SQL', 'React', 'Material UI'],
+    description:
+      "Find everyone's availabilities without having to create an account.",
+    picture: '/rendezview.png',
+    codeLink: 'https://github.com/RendezView/RendezView',
+    siteLink: 'https://rendezview.vercel.app/',
+  },
+  {
+    id: '3',
     title: 'FlexWise',
     tags: ['JavaScript', 'SQL', 'JWT', 'Testing', 'BCrypt'],
     description:
@@ -13,26 +33,6 @@ const cards = [
     picture: '/flexwise.png',
     codeLink: 'https://github.com/Danger-Noodless/FSA',
     siteLink: 'https://flexwise.vercel.app/',
-  },
-  {
-    id: '2',
-    title: 'Rendez View',
-    tags: ['JavaScript', 'API', 'SQL', 'React', 'Material UI'],
-    description:
-      "Find everyone's availabilities without having to create an account",
-    picture: '/rendezview.png',
-    codeLink: 'https://github.com/RendezView/RendezView',
-    siteLink: 'https://rendezview.vercel.app/',
-  },
-  {
-    id: '3',
-    title: 'Feo Fig',
-    tags: ['Typescript', 'React', 'AWS', 'Docker', 'Puppeteer'],
-    description:
-      'Optimize your frontend with fast, easy, and reusable configurations',
-    picture: '/feofig.png',
-    codeLink: 'https://github.com/oslabs-beta/feofig',
-    siteLink: 'http://feofig.com',
   },
 ];
 
