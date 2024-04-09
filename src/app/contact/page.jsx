@@ -1,12 +1,13 @@
 "use client";
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Image from 'next/image';
 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
+  const text = 'Say Hello';
 
   const form = useRef();
 
@@ -15,36 +16,43 @@ const ContactPage = () => {
     setError(false);
     setSuccess(false);
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          form.current.reset();
-        },
-        () => {
-          setError(true);
-        }
-      );
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID,
+      form.current,
+      process.env.NEXT_PUBLIC_PUBLIC_KEY
+    ).then(
+      () => {
+        setSuccess(true);
+        form.current.reset();
+      },
+      () => {
+        setError(true);
+      }
+    );
   };
 
   return (
     <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
+      className='h-full'
+      initial={{ y: '-200vh' }}
+      animate={{ y: '0%' }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
-          <div>
-            {text.split("").map((letter, index) => (
+      <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+        {/* BIOGRAPHY AND TEXT CONTAINER */}
+        <div className='lg:w-1/2 h-full flex flex-col justify-center items-center space-y-10'>
+          {/* BIOGRAPHY IMAGE */}
+          <Image
+            src='/circle-pic.png'
+            alt=''
+            width={112}
+            height={112}
+            className='w-40 h-40 rounded-full object-cover'
+          />
+          {/* TEXT CONTAINER */}
+          <div className='text-6xl pb-12'>
+            {text.split('').map((letter, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 1 }}
@@ -61,35 +69,36 @@ const ContactPage = () => {
             😊
           </div>
         </div>
+
         {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className='lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24'
         >
           <span>Hi Andy,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
-            name="user_message"
+            className='bg-transparent border-b-2 border-b-black outline-none resize-none'
+            name='user_message'
           />
           <span>My mail address is:</span>
           <input
-            name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
+            name='user_email'
+            type='text'
+            className='bg-transparent border-b-2 border-b-black outline-none'
           />
           <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
+          <button className='bg-purple-200 rounded font-semibold text-gray-600 p-4'>
             Send
           </button>
           {success && (
-            <span className="text-green-600 font-semibold">
+            <span className='text-green-600 font-semibold'>
               Your message has been sent successfully!
             </span>
           )}
           {error && (
-            <span className="text-red-600 font-semibold">
+            <span className='text-red-600 font-semibold'>
               Something went wrong!
             </span>
           )}
