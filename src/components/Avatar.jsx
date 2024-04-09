@@ -10,19 +10,14 @@ export function Avatar(props) {
   const {nodes, materials} = useGLTF('models/6614f20dafdac298a81d25de.glb');
 
   const {animations: wavingAnimation} = useFBX('animations/Waving.fbx');
-  const {animations: dancingAnimation} = useFBX('animations/Dancing.fbx');
-  // Changes default name from 'Maximo' to animation
-  wavingAnimation[0].name = 'Waving';
-  dancingAnimation[0].name = 'Dancing';
 
-  const {actions} = useAnimations(
-    [wavingAnimation[0], dancingAnimation[0]],
-    group
-  );
+  // Changes default name from 'Maximo' to
+  wavingAnimation[0].name = 'Waving';
+
+  const {actions} = useAnimations(wavingAnimation, group);
 
   useEffect(() => {
     actions['Waving'].reset().fadeIn(0.5).play();
-    // actions['Dancing'].reset().fadeIn(0.5).play();
   }, []);
 
   return (

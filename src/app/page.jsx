@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import {motion} from 'framer-motion';
 import {Canvas} from '@react-three/fiber';
-import { Experience } from '@/components/Experience';
+import {Experience} from '@/components/Experience';
 
 const Homepage = () => {
   return (
@@ -17,8 +17,13 @@ const Homepage = () => {
         {/* IMAGE CONTAINER */}
         <div className='h-1/2 lg:h-full lg:w-1/2 relative'>
           {/* <Image src='/anime-pic.png' alt='' fill className='object-contain' /> */}
-          <Canvas shadows camera={{position: [0, 2, 5], fov: 21}}>
-            <color attach='background' args={['#ececec']} />
+          <Canvas
+            shadows
+            camera={{position: [0, 2, 5], fov: 21}}
+            gl={{alpha: true}}
+          >
+            {/* Adds color to the background */}
+            {/* <color attach='background' args={['#ececec']} /> */}
             <Experience />
           </Canvas>
         </div>
