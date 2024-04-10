@@ -95,17 +95,17 @@ const Navbar = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <img src='github.png' alt='Github link' width='32' height='32' />
+          <img src='/icons/github.png' alt='Github link' width='32' height='32' />
         </a>
         <a
           href='https://www.linkedin.com/in/andythelam/'
           target='_blank'
           rel='noopener noreferrer'
         >
-          <img src='linkedin.png' alt='LinkedIn Link' width='32' height='32' />
+          <img src='/icons/linkedin.png' alt='LinkedIn Link' width='32' height='32' />
         </a>
-        <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
-          <img src='resume.png' alt='Resume Link' width='32' height='32' />
+        <a href='/documents/resume.pdf' target='_blank' rel='noopener noreferrer'>
+          <img src='/icons/resume.png' alt='Resume Link' width='32' height='32' />
         </a>
       </div>
       {/* RESPONSIVE MENU */}
