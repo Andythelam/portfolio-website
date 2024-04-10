@@ -10,7 +10,7 @@ const cards = [
     tags: ['Typescript', 'React', 'AWS', 'Docker', 'Puppeteer'],
     description:
       'Optimize your frontend with fast, easy, and reusable configurations.',
-    picture: '/feofig.png',
+    picture: '/images/feofig.png',
     codeLink: 'https://github.com/oslabs-beta/feofig',
     siteLink: 'http://feofig.com',
   },
@@ -20,7 +20,7 @@ const cards = [
     tags: ['JavaScript', 'API', 'SQL', 'React', 'Material UI'],
     description:
       "Find everyone's availabilities without having to create an account.",
-    picture: '/rendezview.png',
+    picture: '/images/rendezview.png',
     codeLink: 'https://github.com/RendezView/RendezView',
     siteLink: 'https://rendezview.vercel.app/',
   },
@@ -30,7 +30,7 @@ const cards = [
     tags: ['JavaScript', 'SQL', 'JWT', 'Testing', 'BCrypt'],
     description:
       'Save money on health expenses by calculating your optimal FSA contribution!',
-    picture: '/flexwise.png',
+    picture: '/images/flexwise.png',
     codeLink: 'https://github.com/Danger-Noodless/FSA',
     siteLink: 'https://flexwise.vercel.app/',
   },
