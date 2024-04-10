@@ -5,8 +5,8 @@ import TransitionProvider from "@/components/transitionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Andy Lam Personal Website",
-  description: "Contains portfolio, about page, and contact information",
+  title: "Andy | Software Engineer",
+  description: "Andy Lam's personal website and portfolio",
 };
 
 export default function RootLayout({ children }) {
