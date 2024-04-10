@@ -1,3 +1,7 @@
+body {
+  background-color: #f5efe6; /* Or any color value like hex, rgb, or a TailwindCSS utility class if processed through a PostCSS plugin */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

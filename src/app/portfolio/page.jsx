@@ -49,7 +49,7 @@ const PortfolioPage = () => {
       <div className='flex justify-center items-center mx-auto px-6' ref={ref}>
         <div className=''>
           <div className='text-5xl text-center py-6'>
-            Some things I've worked on
+            Projects
           </div>
           <Carousel cards={cards} />
         </div>
