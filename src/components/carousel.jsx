@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselItem } from './CarouselItem';
+import { CarouselItem } from './carouselItem';
 
 export const Carousel = ({ cards }) => {
   return (
