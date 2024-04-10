@@ -103,18 +103,31 @@ const ContactPage = () => {
             placeholder='Your Message'
           />
 
+          {/* Inputs */}
           <button className='bg-purple-200 rounded font-semibold text-gray-600 p-2 text-sm'>
             Send
           </button>
           {success && (
-            <span className='text-green-600 font-semibold'>
-              Your message has been sent successfully!
-            </span>
+            <motion.div
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              className='p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'
+              role='alert'
+            >
+              <span className='font-medium'>Success!</span> Your message has
+              been sent successfully.
+            </motion.div>
           )}
           {error && (
-            <span className='text-red-600 font-semibold'>
-              Something went wrong!
-            </span>
+            <motion.div
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              className='p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800'
+              role='alert'
+            >
+              <span className='font-medium'>Error!</span> Something went wrong,
+              please try again.
+            </motion.div>
           )}
         </form>
       </div>
