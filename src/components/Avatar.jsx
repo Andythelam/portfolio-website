@@ -18,7 +18,7 @@ export function Avatar(props) {
 
   useEffect(() => {
     actions['Waving'].reset().fadeIn(0.5).play();
-  }, []);
+  }, [actions]);
 
   return (
     <group {...props} ref={group} dispose={null}>

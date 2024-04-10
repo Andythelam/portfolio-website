@@ -104,11 +104,7 @@ const Navbar = () => {
         >
           <img src='linkedin.png' alt='LinkedIn Link' width='32' height='32' />
         </a>
-        <a
-          href='/resume.pdf'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
+        <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
           <img src='resume.png' alt='Resume Link' width='32' height='32' />
         </a>
       </div>
