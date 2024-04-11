@@ -41,7 +41,7 @@ const ContactPage = () => {
       animate={{y: '0%'}}
       transition={{duration: 1}}
     >
-      <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+      <div className='h-full flex flex-col lg:flex-row sm:px-4 md:px-6 lg:px-10 xl:px-20'>
         {/* BIOGRAPHY AND TEXT CONTAINER */}
         <div className='lg:w-1/2 h-full flex flex-col justify-center items-center space-y-10'>
           {/* BIOGRAPHY IMAGE */}
@@ -76,14 +76,14 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className='lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-4 justify-center p-24'
+          className='lg:w-1/2 w-3/4 bg-white rounded-2xl text-xl flex flex-col gap-4 justify-center p-10 mx-auto'
         >
           <h2 className='text-2xl font-bold mb-4 text-center'>Contact</h2>
           <input
             id='user_subject'
             name='user_subject'
             type='text'
-            className='border-2 border-gray-300 outline-none rounded-lg p-1 text-sm mb-2'
+            className='border-2 bg-gray-100 outline-none rounded-lg p-1 text-sm mb-2'
             placeholder='Subject'
           />
 
@@ -91,20 +91,20 @@ const ContactPage = () => {
             id='user_email'
             name='user_email'
             type='email'
-            className='border-2 border-gray-300 outline-none rounded-lg p-1 text-sm mb-2'
+            className='border-2 bg-gray-100 outline-none rounded-lg p-1 text-sm mb-2'
             placeholder='Your Email'
           />
 
           <textarea
             id='user_message'
             rows={10}
-            className='border-2 border-gray-300 outline-none rounded-lg p-2 text-sm'
+            className='border-2 bg-gray-100 outline-none rounded-lg p-2 text-sm'
             name='user_message'
             placeholder='Your Message'
           />
 
           {/* Inputs */}
-          <button className='bg-purple-200 rounded font-semibold text-gray-600 p-2 text-sm'>
+          <button className='bg-green-300 rounded font-semibold text-gray-600 p-2 text-sm'>
             Send
           </button>
           {success && (
