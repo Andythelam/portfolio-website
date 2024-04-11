@@ -83,7 +83,7 @@ const PortfolioPage = () => {
           {/* Title */}
           <div className='text-5xl text-center py-4'>Projects</div>
           {/* Carousel */}
-          <div className='grid w-5/6 mx-auto'>
+          <div className='grid lg:w-5/6 md:w-5/6 sm:w-full mx-auto'>
             <Carousel
               swipeable={true}
               draggable={false}

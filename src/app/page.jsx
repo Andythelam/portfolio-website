@@ -16,7 +16,7 @@ const Homepage = () => {
     >
       <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         {/* IMAGE CONTAINER */}
-        <div className='h-1/2 lg:h-full lg:w-1/2 relative'>
+        <div className='h-1/2 lg:h-full lg:w-1/2'>
           {/* <Image src='/anime-pic.png' alt='' fill className='object-contain' /> */}
           <Canvas
             shadows
@@ -31,7 +31,8 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <div className='h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center'>
           {/* TITLE */}
-          <h1 className='text-4xl md:text-6xl font-bold pt-16 lg:pt-0'>
+          <h1 className='text-4xl md:text-6xl font-bold lg:pt-0 md:pt-16 pt-60'>
+
             Hi, I'm Andy
           </h1>
           {/* DESC */}
