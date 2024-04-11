@@ -5,7 +5,7 @@ export const CarouselItem = ({card}) => {
   return (
     <motion.div
       whileHover={{scale: 1.06}}
-      className='snap-center shrink-0 first:ml-5 last:mr-5 w-80 h-[32rem] mx-2 my-4 bg-white rounded-2xl shadow-xl flex flex-col overflow-hidden'
+      className='snap-center shrink-0 first:ml-5 last:mr-5 w-80 h-[32rem] mx-2 my-4 bg-white rounded-2xl shadow-xl flex flex-col overflow-hidden mb-4'
       transition={{duration: 0.2}}
     >
       {/* Image container with fixed height */}
