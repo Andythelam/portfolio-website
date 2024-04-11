@@ -1,7 +1,9 @@
 'use client';
 import {motion, useScroll, useTransform} from 'framer-motion';
 import {useRef} from 'react';
-import {Carousel} from '@/components/carousel';
+import {CarouselItem} from '@/components/carouselItem';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const cards = [
   {
@@ -34,7 +36,37 @@ const cards = [
     codeLink: 'https://github.com/Danger-Noodless/FSA',
     siteLink: 'https://flexwise.vercel.app/',
   },
+  {
+    id: '4',
+    title: 'Personal Website',
+    tags: ['JavaScript', 'Next.js', 'React', 'Three.js', 'Blender'],
+    description:
+      "'This website that you're seeing right now",
+    picture: '/images/portfolio.png',
+    codeLink: 'https://github.com/Andythelam/portfolio-website',
+    siteLink: 'https://andythelam.com/',
+  },
 ];
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: {max: 4000, min: 3000},
+    items: 5,
+  },
+  desktop: {
+    breakpoint: {max: 3000, min: 1024},
+    items: 3,
+  },
+  tablet: {
+    breakpoint: {max: 1024, min: 464},
+    items: 2,
+  },
+  mobile: {
+    breakpoint: {max: 464, min: 0},
+    items: 1,
+  },
+};
 
 const PortfolioPage = () => {
   const ref = useRef();
@@ -48,10 +80,30 @@ const PortfolioPage = () => {
     >
       <div className='flex justify-center items-center mx-auto px-6' ref={ref}>
         <div className=''>
-          <div className='text-5xl text-center py-6'>
-            Projects
+          {/* Title */}
+          <div className='text-5xl text-center py-6'>Projects</div>
+          {/* Carousel */}
+          <div className='grid w-4/5 mx-auto'>
+            <Carousel
+              swipeable={false}
+              draggable={false}
+              showDots={true}
+              infinite={true}
+              responsive={responsive}
+              ssr={true}
+              keyBoardControl={true}
+              customTransition='all .5'
+              transitionDuration={500}
+              // containerClass='carousel-container'
+              removeArrowOnDeviceType={['tablet', 'mobile']}
+              dotListClass='custom-dot-list-style'
+              // itemClass='carousel-item-padding-40-px'
+            >
+              {cards.map((card) => (
+                <CarouselItem card={card} key={card.id} />
+              ))}
+            </Carousel>
           </div>
-          <Carousel cards={cards} />
         </div>
       </div>
     </motion.div>
