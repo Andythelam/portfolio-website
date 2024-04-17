@@ -41,9 +41,9 @@ const ContactPage = () => {
       animate={{y: '0%'}}
       transition={{duration: 1}}
     >
-      <div className='h-full flex flex-col lg:flex-row sm:px-4 md:px-6 lg:px-10 xl:px-20'>
+      <div className='flex flex-col items-center px-4 md:px-6 xl:px-20'>
         {/* BIOGRAPHY AND TEXT CONTAINER */}
-        <div className='lg:w-1/2 h-full flex flex-col justify-center items-center space-y-10'>
+        <div className='w-full flex flex-col items-center space-y-10 pt-10'>
           {/* BIOGRAPHY IMAGE */}
           <Image
             src='/images/circle-pic.png'
@@ -68,7 +68,6 @@ const ContactPage = () => {
                 {letter}
               </motion.span>
             ))}
-            😊
           </div>
         </div>
 
@@ -76,7 +75,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className='lg:w-1/2 w-3/4 bg-white rounded-2xl text-xl flex flex-col gap-4 justify-center p-10 mx-auto'
+          className='md:w-[600px] h-[600px] w-full bg-white rounded-2xl text-xl flex flex-col gap-4 justify-center md:p-10 p-6 mx-auto'
         >
           <h2 className='text-2xl font-bold mb-4 text-center'>Contact</h2>
           <input
