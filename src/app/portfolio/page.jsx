@@ -58,7 +58,7 @@ const PortfolioPage = () => {
       <div className='flex justify-center items-center mx-auto px-6 w-full' ref={ref}>
         <div className='w-full'>
           {/* Title */}
-          <div className='text-5xl text-center py-14'>Projects</div>
+          <div className='text-5xl text-center py-8'>Projects</div>
           {/* Carousel */}
           <div className='flex justify-center flex-wrap gap-x-10 gap-y-10 mx-auto'>
             {cards.map((card) => (
